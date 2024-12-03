@@ -4,8 +4,11 @@ plugins {
 }
 
 android {
+
     namespace = "com.example.projetmobile"
     compileSdk = 34
+
+
 
     defaultConfig {
         applicationId = "com.example.projetmobile"
@@ -32,8 +35,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
-
-
     buildFeatures {
         viewBinding = true // Enable view binding if required for easier layout handling
     }
@@ -41,22 +42,14 @@ android {
 
 dependencies {
     // Core dependencies
-//    implementation(libs.camera.core)
-//    implementation(libs.camera.lifecycle)
-//    implementation(libs.camera.view)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.gridlayout)
 
-
-
-
-        //implementation(libs.camera.core)
-        implementation(libs.camera.camera2)
-        //implementation(libs.camera.lifecycle)
-        //implementation(libs.camera.view)
+    // Camera
+    implementation(libs.camera.camera2)
 
     // Networking
     implementation(libs.retrofit)
@@ -69,9 +62,6 @@ dependencies {
     // ML Kit Barcode Scanning
     implementation(libs.mlkit.barcode.scanning)
 
-
-
-
     // Image loading
     implementation(libs.glide)
     implementation(libs.navigation.fragment)
@@ -80,7 +70,9 @@ dependencies {
     implementation(libs.camera.lifecycle)
     annotationProcessor(libs.glide.compiler)
 
-
+    // Google Play Services
+    //implementation("com.google.android.gms:play-services:18.1.0")
+    implementation("com.google.android.gms:play-services-auth:18.1.0")
 
     // Testing
     testImplementation(libs.junit)

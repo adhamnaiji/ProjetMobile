@@ -1,27 +1,28 @@
 [versions]
-agp = "8.6.1"
-junit = "4.13.2"
-junitVersion = "1.2.1"
-espressoCore = "3.6.1"
-appcompat = "1.7.0"
-material = "1.12.0"
-activity = "1.9.3"
-constraintlayout = "2.2.0"
-gridlayout = "1.0.0"
+agp = "8.6.1"                       # Android Gradle Plugin version
+junit = "4.13.2"                     # JUnit version for testing
+junitVersion = "1.2.1"               # JUnit extension version
+espressoCore = "3.6.1"               # Espresso Core version for UI testing
+appcompat = "1.7.0"                  # AndroidX AppCompat version
+material = "1.12.0"                  # Material Components for Android version
+activity = "1.9.3"                   # AndroidX Activity version
+constraintlayout = "2.2.0"           # ConstraintLayout version
+gridlayout = "1.0.0"                 # GridLayout version
 
-retrofit = "2.9.0"
-gson = "2.9.0"
-firebase-auth = "22.0.0"
-mlkit-barcode-scanning = "17.0.3"
-glide = "4.15.1"
-firestore = "24.7.1"
-navigationFragment = "2.8.3"
-navigationUi = "2.8.3"
-cameraView = "1.4.0"
-cameraLifecycle = "1.4.0"
+retrofit = "2.9.0"                   # Retrofit version for network operations
+gson = "2.9.0"                       # Gson version for JSON parsing
+firebase-auth = "21.0.1"         # Firebase Auth version
+play-services-auth="18.1.0"
+mlkit-barcode-scanning = "17.0.3"    # ML Kit Barcode Scanning version
+glide = "4.15.1"                     # Glide version for image loading
+firestore = "24.7.1"                 # Firebase Firestore version
+navigationFragment = "2.8.3"         # Navigation Fragment version
+navigationUi = "2.8.3"               # Navigation UI version
+cameraView = "1.4.0"                 # CameraView version
+cameraLifecycle = "1.4.0"            # Camera Lifecycle version
 
-cameraCore = "1.4.0"
-cameraCamera2 = "1.4.0"
+cameraCore = "1.4.0"                 # Camera Core version
+cameraCamera2 = "1.4.0"              # Camera Camera2 version
 
 
 [libraries]
@@ -34,10 +35,12 @@ activity = { group = "androidx.activity", name = "activity", version.ref = "acti
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
 
+# Camera dependencies
 camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "cameraCamera2" }
+camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraView" }
+camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraLifecycle" }
 
-
-
+# Retrofit and Firebase dependencies
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "gson" }
 firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebase-auth" }
@@ -45,12 +48,11 @@ mlkit-barcode-scanning = { module = "com.google.mlkit:barcode-scanning", version
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
 firestore = { module = "com.google.firebase:firebase-firestore", version.ref = "firestore" }
+
+# Navigation dependencies
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
-camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraView" }
-camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraLifecycle" }
-
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-google-services = { id = "com.google.gms.google-services", version = "4.4.2" }
+google-services = { id = "com.google.gms.google-services", version = "4.3.10" }  # Ensure correct version is used
